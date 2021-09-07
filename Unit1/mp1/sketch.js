@@ -8,6 +8,11 @@ function draw() {
   if (mouseIsPressed) {
     background(20,20,100);
 
+    //Backstory Start
+    fill(255);
+    text("Born the seventh daughter of a seventh daughter, Claire DuNoir faught against her past by focusing on teaching.  Ultimately, she was forced to face her mystic nature when a vamprie attacked her and a student while walking them back to the dorm. Now, she fights the undead in the night as Scarlet Night.",340,40,240);
+    //Backstory Start
+
     //start moon
   fill(220,220,190);
   ellipse(140,120,150);
