@@ -4,18 +4,18 @@ var font1;
 function preload() {
   soundFormats('ogg', 'mp3');
   song1 = loadSound("assets/Let_It_In_and_Let_It_Out.ogg");
+  font1 = loadFont("assets/PermanentMarker-Regular.ttf");
+  
 }
 
 
 function setup() {
   createCanvas(500, 500);
   background("red");
-  font1 = loadFont("assets/PermanentMarker-Regular.ttf");
-  song1.loop();
   textFont(font1);
   textSize(48);
   text("Song Playing!",100,100);
-
+  song1.loop();
 }
 
 function draw() {
