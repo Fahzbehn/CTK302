@@ -12,4 +12,7 @@ function draw() {
   textFont(font1);
   textSize(48);
   text("Hello everyone!",100,100);
+  textFont(font2);
+  textSize(20);
+  text("I'm another font.",50,200);
 }
