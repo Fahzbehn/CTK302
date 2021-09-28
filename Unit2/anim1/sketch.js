@@ -9,10 +9,10 @@ function setup() {
 }
 
 function draw() {
-  background(250);
   fill(r,g,b);
-  rect (x,y,100,100);
-
+  background(250);
+  textSize(20);
+  text("Aren't I colorful?", x, y,500,500);
   x=x+4;
   if (x > width) {
     x = 0;
