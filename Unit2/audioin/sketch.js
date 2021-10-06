@@ -2,6 +2,7 @@ var mic;
 var vol;
 var c = 'green';
 let x = 0 ;
+// add image variable saying QUIET then wait five seconds.
 
 function setup() {
   createCanvas(400, 400);
@@ -16,7 +17,7 @@ function draw() {
   background(c);
 
   // get the sound input
-  vol = (mic.getLevel().toFixed(15)); // returned level is between 0 and 1
+  vol = (mic.getLevel().toFixed(2)); // returned level is between 0 and 1
 
   // check how loud the input is
   if (vol > .20) { // if the volume is LOUD?
