@@ -1,6 +1,7 @@
 let state = 0;
 let timer = 0;
 let carX = 0;
+let carVelocity = 5;
 
 function setup() {
   createCanvas(800, 800);
@@ -15,6 +16,11 @@ function draw() {
   rect(width / 2, height / 2 - 50, 200, 500);
   fill("pink");
   rect(carX,750,75,20);
+
+  if (carX > width+80){
+    carX = -80;
+
+  }
   switch (state) {
 
     case 0:
@@ -25,7 +31,7 @@ function draw() {
       ellipse(width / 2, height / 2 - 50, 100);
       fill(100);
       ellipse(width / 2, height / 2 + 100, 100);
-
+      carX = 0;
       break;
 
     case 1:
@@ -36,6 +42,7 @@ function draw() {
       ellipse(width / 2, height / 2 - 50, 100);
       fill(0, 255, 0);
       ellipse(width / 2, height / 2 + 100, 100);
+      carX = carX + carVelocity;
       break;
 
     case 2:
@@ -46,6 +53,7 @@ function draw() {
       ellipse(width / 2, height / 2 - 50, 100);
       fill(100);
       ellipse(width / 2, height / 2 + 100, 100);
+      carX = carX + carVelocity*2;
       break;
 
   }

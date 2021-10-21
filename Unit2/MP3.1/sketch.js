@@ -6,7 +6,7 @@ let stage = 0;
 let stageOneImage = [];
 let currentTrans = 0;
 let secondTimer = 0;
-
+let imgBlack;
 
 function setup() {
   createCanvas(800, 800);
