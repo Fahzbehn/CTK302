@@ -17,7 +17,7 @@ let song1, song2;
 function preload() {
   soundFormats('ogg', 'mp3');
   song1 = loadSound("assets/home_to_you.mp3");
-  song2 = loadSound("assets/ctk_loop.mp3");
+  song2 = loadSound("assets/cheerful.mp3");
 }
 
 
