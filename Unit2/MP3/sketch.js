@@ -12,6 +12,13 @@ let secondTimer = 0;
 let img_01, img_02, img_03;
 let bgLevel = 0;
 let fadeAmount = 0;
+let song1, song2;
+
+function preload() {
+  soundFormats('ogg', 'mp3');
+  song1 = loadSound("assets/home_to_you.mp3");
+  song2 = loadSound("assets/ctk_loop.mp3");
+}
 
 
 function setup() {
@@ -44,10 +51,12 @@ function draw() {
     textSize(40);
     fill("pink");
     textAlign(CENTER);
+    song1.loop();
     text("Believe in yourself because I believe in you.", width / 2, height - 160);
     text("Press space to continue...", width / 2, height - 80);
   }
   if (stage == 6) {
+    song2.loop();
     textSize(40);
     fill("pink");
     textAlign(CENTER);
@@ -135,6 +144,7 @@ function game() {
       break;
 
     case 4:
+      song1.stop();
       background(bgLevel);
       //text("stage 4", width / 2, 200);
       //spawn anxietys
@@ -238,6 +248,7 @@ function keyPressed() {
   }
 
   if ((keyCode == 32) && (stage == 6)) {
+      song2.stop();
       location.reload();
       //
     }
