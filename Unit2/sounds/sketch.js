@@ -30,7 +30,7 @@ function mouseReleased() {
       fill(20,20,0);
       text("case 1",60,60)
       song2.loop();
-      stage = 0;
+      stage = 2;
       break;
 
     case 2:
