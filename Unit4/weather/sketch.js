@@ -1,17 +1,17 @@
 // Note - you must change line 19 to your own APPID to get this to work!
 
-var weather;
+var weather = [];
 var weatherID = 0; // returned in the JSON weather element
 var myState = 0;
 var x = 0;
-var windspeed = 0;
-var temperature = 0;
+var windspeed = [];
+var temperature = [];
 var desc;
 var roundedTemp = 0;
 var tempRed = [129, 204, 255, 253, 250, 246, 225, 177, 140,  12,  20,  35,  51,  65, 150,  33,  50,  62, 100, 140, 180, 250, 249, 245, 247, 240, 220, 180, 140, 240, 250, 253];
 var tempGreen = [130, 204, 255, 230, 200, 100, 4,   100, 1,     0,   0,  60, 140, 181, 231, 120, 161, 200, 231, 255, 255, 251, 246, 221, 180, 140,  80,  39,   1,  39, 200, 240];
 var tempBlue = [129, 205, 255, 255, 254, 253, 226, 192, 175, 150, 200, 253, 240, 253, 254,   2,  49,   5, 100, 140, 181, 160, 115,  90,  41,  18,   4,   3,   1,  60, 200, 240];
-var state = 0;
+var cityState = 0;
 
 
 function setup() {
@@ -34,7 +34,10 @@ function setup() {
   var myBigStringTwo = myCityStringTwo + myIDString;
   var myBigStringThree = myCityStringThree + myIDString;
 
-  loadJSON(myBigStringOne, gotData); // that gotData function happens when JSON comes back.
+  loadJSON(myBigStringOne, gotDataOne);
+  loadJSON(myBigStringTwo, gotDataTwo);
+  loadJSON(myBigStringThree, gotDataThree);
+   // that gotData function happens when JSON comes back.
 }
 
 function gotData(data) {
@@ -92,8 +95,8 @@ function draw() {
 
   function mouseReleased() {
 
-    state = state + 1;
-    if (state > 4) {
+    state++;
+    if (state > 2) {
       state = 0;
     }
   }
