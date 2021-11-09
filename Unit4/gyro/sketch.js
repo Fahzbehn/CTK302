@@ -36,7 +36,7 @@ function draw() {
 
   rotate(radians(alpha)); // rotate the bunny depending on the alpha intake
 
-  image(purpleImage, 0, 0, 500, 500);
+  image(purpleImage, 0, 0, 900, 900);
   // rect(0, 0, 100, 100) ;
   pop();
 
@@ -62,7 +62,7 @@ function draw() {
   noStroke();
   textSize(300);
   textAlign(CENTER);
-  text("ctk", width / 2, height / 2);
+  text("Spooky enough?", width / 2, height / 2);
 
 }
 
