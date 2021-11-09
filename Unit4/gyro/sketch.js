@@ -6,13 +6,14 @@ let purpleImage;
 let xPosition = 0;
 let yPosition = 0;
 let x = 0, y = 0, z = 0 ; // accelerometer data
+var font1;
 
 
 function setup() {
 
   createCanvas(windowWidth, windowHeight);
-
-
+  font1 = loadFont("assets/FredokaOne-Regular.ttf");
+  textFont(font1);
 
   purpleImage = loadImage("assets/purple.png");
   imageMode(CENTER);
@@ -60,7 +61,7 @@ function draw() {
   // Text that makes CTK type in the background
   fill('white');
   noStroke();
-  textSize(250);
+  textSize(60);
   textAlign(CENTER);
   text("Spooky enough?", width / 2, height / 2);
 
