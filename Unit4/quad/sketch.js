@@ -28,7 +28,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   //  createCanvas(displayWidth, displayHeight);
   num = 0;
-  textFont(font1, 36);
+  textFont(font1, 48);
   intervalCurrentPosition(positionPing, 1000); // this is what calls positionPing function
   treeImage[0] = loadImage("assets/59-SE Corner.jpg");
 treeImage[1] = loadImage("assets/110-left-SE.jpg");
@@ -50,7 +50,7 @@ function draw() {
 }
 
 function positionPing(position) {
-  textSize(30);
+  
   num++;
   intervalCurrentPosition(positionPing, 500); // this is what calls positionPing function
 
