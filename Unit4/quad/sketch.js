@@ -11,7 +11,7 @@ var speciesData = ["Quercus imbricaria","Cornus mas","Cornus mas","Tilia tomento
 //"Gleditsia triacanthos var.inermis","Gleditsia triacanthos var.inermis", "Picea pungens f. glauca", "Acer rubrum", "Quercus imbricaria", "Acer saccharum", "Acer saccharum", "Acer rebrum \'SUN VALLEY\'", "Acer rebrum \'SUN VALLEY\'", "Cercis canadensis \'LAVENDER TWIST\'", "Acer rebrum \'SUN VALLEY\'","Acer rebrum \'SUN VALLEY\'", "Quercus macrocarpa", "Quercus macrocarpa", "Celtis occidentalis", "Fagys sylvatica pendula", "Malus cultivar"];
 var knownAs = ["Shingle Oak", "Cornelian Cherry Dogwood", "Cornelian Cherry Dogwood", "Silver Linden", "Honeylocust", "Ginko", "Silver Linden", "Weeping Normay Spruce","Colorado Blue Spruce", "Silver Linden", "Colorado Blue Spruce"];
 //"Honeylocust","Honeylocust", "Colorado Blue Spruce", "Red Maple", "Shingle Oak", "Sugar Maple", "Sugar Maple", "Sun Valley Red Maple", "Sun Valley Red Maple", "Lavender Twist Redbud","Acer rebrum \'SUN VALLEY\'","Acer rebrum \'SUN VALLEY\'","Bur Oak", "Bur Oak", "Common Hackberry", "Weeping European Beech", "Crabapple"];
-var treeImage = [];
+let treeImage = [];
 var imgWidth = 780;
 var imgHeight = 1040;
 
