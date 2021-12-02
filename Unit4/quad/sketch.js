@@ -25,8 +25,8 @@ function preload() {
 }
 
 function setup() {
-  // createCanvas(windowWidth, windowHeight);
-    createCanvas(displayWidth, displayHeight);
+  createCanvas(windowWidth, windowHeight);
+  //  createCanvas(displayWidth, displayHeight);
   num = 0;
   textFont(font1, 36);
   intervalCurrentPosition(positionPing, 1000); // this is what calls positionPing function
@@ -50,7 +50,7 @@ function draw() {
 }
 
 function positionPing(position) {
-  // textSize(36);
+  textSize(20);
   num++;
   intervalCurrentPosition(positionPing, 500); // this is what calls positionPing function
 
