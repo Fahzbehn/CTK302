@@ -14,6 +14,7 @@ var knownAs = ["Shingle Oak", "Cornelian Cherry Dogwood", "Cornelian Cherry Dogw
 let treeImage = [];
 var imgWidth = 360;
 var imgHeight = 520;
+var treeDistance = 1;
 var treeFound = 0;
 let noTree;
 
