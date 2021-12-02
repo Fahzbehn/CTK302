@@ -71,7 +71,7 @@ for (let i = 0; i < 12; i++) {
       closestTree = i;
       treeFound = 1;
     }
-    If (treeFound==1)
+    if (treeFound==1)
     {
     image(treeImage[i], 0, 250, imgWidth, imgHeight);
     text("Species: " + speciesData[i], 10, 40);
