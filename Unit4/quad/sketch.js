@@ -17,6 +17,7 @@ var imgHeight = 520;
 var treeDistance = 1;
 var treeFound = 0;
 let noTree;
+var imgY = 150;
 
 function preload() {
   locationData = getCurrentPosition();
@@ -73,7 +74,7 @@ for (let i = 0; i < 12; i++) {
     }
     if (treeFound==1)
     {
-    image(treeImage[i], 0, 250, imgWidth, imgHeight);
+    image(treeImage[i], 0, imgY, imgWidth, imgHeight);
     text("Species: " + speciesData[i], 10, 40);
     text("Common: " + knownAs[i], 10, 90);
     }
@@ -84,7 +85,7 @@ for (let i = 0; i < 12; i++) {
       treeDistance = 1;
       if (treeFound==0){
         //If no tree is found, show the placeholder image.
-        image(noTree, 0, 250, imgWidth, imgHeight);
+        image(noTree, 0, imgY, imgWidth, imgHeight);
       }
     }
   }
