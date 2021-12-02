@@ -17,7 +17,7 @@ var imgHeight = 520;
 var treeDistance = 1;
 var treeFound = 0;
 let noTree;
-var imgY = 50;
+var imgY = 10;
 
 function preload() {
   locationData = getCurrentPosition();
