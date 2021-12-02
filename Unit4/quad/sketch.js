@@ -4,16 +4,16 @@ var font1, font2;
 var closestTree = 0;
 var locationData;
 var distanceCheck = .00333;
-var latData = [];
-var longData = [];
-var arbortracker = [59, 110, 110, 109, 64, 35, 108, 78, 63, 108, 63]
-var speciesData = ["Quercus imbricaria","Cornus mas","Cornus mas","Tilia tomentosa", "Gleditsia triacanthos var.inermis", "Ginko Biloba", "Tilia tomentosa", "Picea abies \'PENDULA\'", "Picea pungens f. glauca", "Tilia tomentosa", "Picea pungens f. glauca"]
+var latData = [40.5060193, 40.5049787, 40.5058053, 40.5058144, 40.5057178, 40.506136, 40.5053913, 40.5061093, 40.5060312, 40.5061878, 40.5062703, 40.5072098];
+var longData = [-88.9895816, -88.9899921, -88.9908394, -88.9907217, -88.9908407, -88.9904096, -88.9910597, -88.9895816, -88.9906742, -88.9902529, -88.9909276, -88.9903699];
+var arbortracker = [59, 110, 110, 109, 64, 35, 108, 78, 63, 108, 63, 55]
+var speciesData = ["Quercus imbricaria","Cornus mas","Cornus mas","Tilia tomentosa", "Gleditsia triacanthos var.inermis", "Ginko Biloba", "Tilia tomentosa", "Picea abies \'PENDULA\'", "Picea pungens f. glauca", "Tilia tomentosa", "Picea pungens f. glauca", "Cladrastis kentukea"];
 //"Gleditsia triacanthos var.inermis","Gleditsia triacanthos var.inermis", "Picea pungens f. glauca", "Acer rubrum", "Quercus imbricaria", "Acer saccharum", "Acer saccharum", "Acer rebrum \'SUN VALLEY\'", "Acer rebrum \'SUN VALLEY\'", "Cercis canadensis \'LAVENDER TWIST\'", "Acer rebrum \'SUN VALLEY\'","Acer rebrum \'SUN VALLEY\'", "Quercus macrocarpa", "Quercus macrocarpa", "Celtis occidentalis", "Fagys sylvatica pendula", "Malus cultivar"];
-var knownAs = ["Shingle Oak", "Cornelian Cherry Dogwood", "Cornelian Cherry Dogwood", "Silver Linden", "Honeylocust", "Ginko", "Silver Linden", "Weeping Normay Spruce","Colorado Blue Spruce", "Silver Linden", "Colorado Blue Spruce"];
+var knownAs = ["Shingle Oak", "Cornelian Cherry Dogwood", "Cornelian Cherry Dogwood", "Silver Linden", "Honeylocust", "Ginko", "Silver Linden", "Weeping Normay Spruce","Colorado Blue Spruce", "Silver Linden", "Colorado Blue Spruce", "American Yellowwood"];
 //"Honeylocust","Honeylocust", "Colorado Blue Spruce", "Red Maple", "Shingle Oak", "Sugar Maple", "Sugar Maple", "Sun Valley Red Maple", "Sun Valley Red Maple", "Lavender Twist Redbud","Acer rebrum \'SUN VALLEY\'","Acer rebrum \'SUN VALLEY\'","Bur Oak", "Bur Oak", "Common Hackberry", "Weeping European Beech", "Crabapple"];
 let treeImage = [];
-var imgWidth = 780;
-var imgHeight = 1040;
+var imgWidth = 360;
+var imgHeight = 520;
 var treeFound = 0;
 let noTree;
 
@@ -39,6 +39,7 @@ treeImage[7] = loadImage("assets/78_south.jpg");
 treeImage[8] = loadImage("assets/63-southwest.jpg");
 treeImage[9] = loadImage("assets/108-southwest.jpg");
 treeImage[10] = loadImage("assets/63-west.jpg");
+treeImage[11] = loadImage("assets/pac_test.jpg");
 noTree = loadImage("assets/notrees.png");
 }
 
@@ -59,7 +60,7 @@ function positionPing(position) {
   // text("long: " + position.longitude, 10, 90);
 //For loop i from 1-150 to check if (position.latitude is within latData[i] +/- distanceCheck) && (position.longitude is within longData[i] +/- distanceCheck))
 //add debug for closestTree before for loop
-for (let i = 0; i < 11; i++) {
+for (let i = 0; i < 12; i++) {
   if ((position.latitude > latData[i] - distanceCheck)&&(position.latitude < latData[i] + distanceCheck)&&(position.longitude > longData[i] - distanceCheck)&&(position.longitude < longData[i] + distanceCheck)){
     //checking if closeness to this tree is closer than any other tree in array
     if (((abs(latData[i]-position.latitude))+(abs(latData[i]-position.latitude)))/2 < treeDistance){
