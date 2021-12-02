@@ -12,8 +12,8 @@ var speciesData = ["Quercus imbricaria","Cornus mas","Cornus mas","Tilia tomento
 var knownAs = ["Shingle Oak", "Cornelian Cherry Dogwood", "Cornelian Cherry Dogwood", "Silver Linden", "Honeylocust", "Ginko", "Silver Linden", "Weeping Normay Spruce","Colorado Blue Spruce", "Silver Linden", "Colorado Blue Spruce", "American Yellowwood"];
 //"Honeylocust","Honeylocust", "Colorado Blue Spruce", "Red Maple", "Shingle Oak", "Sugar Maple", "Sugar Maple", "Sun Valley Red Maple", "Sun Valley Red Maple", "Lavender Twist Redbud","Acer rebrum \'SUN VALLEY\'","Acer rebrum \'SUN VALLEY\'","Bur Oak", "Bur Oak", "Common Hackberry", "Weeping European Beech", "Crabapple"];
 let treeImage = [];
-var imgWidth = 360;
-var imgHeight = 520;
+var imgWidth = 720;
+var imgHeight = 1040;
 var treeDistance = 1;
 var treeFound = 0;
 let noTree;
@@ -50,7 +50,7 @@ function draw() {
 }
 
 function positionPing(position) {
-  textSize(20);
+  textSize(30);
   num++;
   intervalCurrentPosition(positionPing, 500); // this is what calls positionPing function
 
