@@ -3,7 +3,7 @@ var distance;
 var font1, font2;
 var closestTree = 0;
 var locationData;
-var distanceCheck = .00001;
+var distanceCheck = .00333;
 var latData = [];
 var longData = [];
 var arbortracker = [59, 110, 110, 109, 64, 35, 108, 78, 63, 108, 63]
@@ -48,6 +48,7 @@ function draw() {
 function positionPing(position) {
   // textSize(36);
   num++;
+  intervalCurrentPosition(positionPing, 500); // this is what calls positionPing function
 
   distance = calcGeoDistance(locationData.latitude, locationData.longitude, position.latitude, position.longitude, 'mi');
 
