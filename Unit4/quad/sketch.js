@@ -17,7 +17,7 @@ var imgHeight = 520;
 var treeDistance = 1;
 var treeFound = 0;
 let noTree;
-var imgY = 250;
+var imgY = 50;
 
 function preload() {
   locationData = getCurrentPosition();
@@ -78,7 +78,7 @@ for (let i = 0; i < 12; i++) {
     //show species of that tree
       fill("red");
       rect(0,0,windowWidth, windowHeight);
-      image(treeImage[i], 0, displayHeight, imgWidth, imgHeight);
+      image(treeImage[i], 0, imgY, imgWidth, imgHeight);
       fill("white");
     text("Species: " + speciesData[i], 10, 40);
     text("Common: " + knownAs[i], 10, 90);
