@@ -73,7 +73,7 @@ for (let i = 0; i < 12; i++) {
     }
     If (treeFound==1)
     {
-    image(treeImage[i], 0, 250, 780, 1040);
+    image(treeImage[i], 0, 250, imgWidth, imgHeight);
     text("Species: " + speciesData[i], 10, 40);
     text("Common: " + knownAs[i], 10, 90);
     }
@@ -84,7 +84,7 @@ for (let i = 0; i < 12; i++) {
       treeDistance = 1;
       if (treeFound==0){
         //If no tree is found, show the placeholder image.
-        image(noTree, 0, 250, 780, 1040);
+        image(noTree, 0, 250, imgWidth, imgHeight);
       }
     }
   }
