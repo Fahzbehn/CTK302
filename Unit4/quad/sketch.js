@@ -54,9 +54,9 @@ function positionPing(position) {
   distance = calcGeoDistance(locationData.latitude, locationData.longitude, position.latitude, position.longitude, 'mi');
 
   background("red");
-  fill("blue");
-  text("lat: " + position.latitude, 10, 40);
-  text("long: " + position.longitude, 10, 90);
+  fill("white");
+  // text("lat: " + position.latitude, 10, 40);
+  // text("long: " + position.longitude, 10, 90);
 //For loop i from 1-150 to check if (position.latitude is within latData[i] +/- distanceCheck) && (position.longitude is within longData[i] +/- distanceCheck))
 //add debug for closestTree before for loop
 for (let i = 0; i < 11; i++) {
@@ -71,6 +71,8 @@ for (let i = 0; i < 11; i++) {
     If (treeFound==1)
     {
     image(treeImage[i], 0, 250, 780, 1040);
+    text("Species: " + speciesData[i], 10, 40);
+    text("Common: " + knownAs[i], 10, 90);
     }
     //show image of that tree
     //show species of that tree
