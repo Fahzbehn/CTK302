@@ -58,8 +58,7 @@ function positionPing(position) {
 
   background("red");
   fill("white");
-  // text("lat: " + position.latitude, 10, 40);
-  // text("long: " + position.longitude, 10, 90);
+  
 //For loop i from 1-150 to check if (position.latitude is within latData[i] +/- distanceCheck) && (position.longitude is within longData[i] +/- distanceCheck))
 //add debug for closestTree before for loop
 for (let i = 0; i < 12; i++) {
@@ -74,18 +73,21 @@ for (let i = 0; i < 12; i++) {
     }
     if (treeFound==1)
     {
-    image(treeImage[i], 0, imgY, imgWidth, imgHeight);
+    
+    //show image of that tree
+    //show species of that tree
+      image(treeImage[i], 0, imgY, imgWidth, imgHeight);
     text("Species: " + speciesData[i], 10, 40);
     text("Common: " + knownAs[i], 10, 90);
     }
-    //show image of that tree
-    //show species of that tree
   } else
     {
       treeDistance = 1;
       if (treeFound==0){
         //If no tree is found, show the placeholder image.
         image(noTree, 0, imgY, imgWidth, imgHeight);
+        text("lat: " + position.latitude, 10, 40);
+        text("long: " + position.longitude, 10, 90);      
       }
     }
   }
