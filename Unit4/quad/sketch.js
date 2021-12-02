@@ -17,8 +17,7 @@ var imgHeight = 1040;
 
 function preload() {
   locationData = getCurrentPosition();
-  font1 = loadFont("assets/Mohave-Light.ttf");
-
+  font1 = loadFont("assets/Oxygen-Regular.ttf");
 }
 
 function setup() {
