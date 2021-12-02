@@ -76,7 +76,7 @@ for (let i = 0; i < 11; i++) {
   }
   //add debug for closestTree after for loop
   //image down slightly to put naming text above.
-  image(treeImage[closestTree], 0, 250, 780, 1040);
+  image(treeImage[1], 0, 250, 780, 1040);
   //text of normal name
   //text of species.
 }
