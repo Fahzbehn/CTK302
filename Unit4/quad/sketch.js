@@ -14,6 +14,8 @@ var knownAs = ["Shingle Oak", "Cornelian Cherry Dogwood", "Cornelian Cherry Dogw
 let treeImage = [];
 var imgWidth = 780;
 var imgHeight = 1040;
+var treeFound = 0;
+let noTree;
 
 function preload() {
   locationData = getCurrentPosition();
@@ -37,7 +39,7 @@ treeImage[7] = loadImage("assets/78_south.jpg");
 treeImage[8] = loadImage("assets/63-southwest.jpg");
 treeImage[9] = loadImage("assets/108-southwest.jpg");
 treeImage[10] = loadImage("assets/63-west.jpg");
-
+noTree = loadImage("assets/notrees.png");
 }
 
 function draw() {
@@ -64,19 +66,25 @@ for (let i = 0; i < 11; i++) {
       //sets treeDistance to the distance to the tree
       treeDistance = ((abs(latData[i]-position.latitude))+(abs(latData[i]-position.latitude)))/2;
       closestTree = i;
+      treeFound = 1;
     }
-
+    If (treeFound==1)
+    {
+    image(treeImage[i], 0, 250, 780, 1040);
+    }
     //show image of that tree
     //show species of that tree
   } else
     {
       treeDistance = 1;
-
+      if (treeFound==0){
+        //If no tree is found, show the placeholder image.
+        image(noTree, 0, 250, 780, 1040);
+      }
     }
   }
   //add debug for closestTree after for loop
   //image down slightly to put naming text above.
-  image(treeImage[1], 0, 250, 780, 1040);
   //text of normal name
   //text of species.
 }
