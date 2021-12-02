@@ -76,7 +76,10 @@ for (let i = 0; i < 12; i++) {
     
     //show image of that tree
     //show species of that tree
+      fill("red");
+      rect(0,0,displayWidth, displayHeight);
       image(treeImage[i], 0, imgY, imgWidth, imgHeight);
+      fill("white");
     text("Species: " + speciesData[i], 10, 40);
     text("Common: " + knownAs[i], 10, 90);
     }
