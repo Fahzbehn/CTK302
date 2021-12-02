@@ -61,6 +61,7 @@ function positionPing(position) {
 //For loop i from 1-150 to check if (position.latitude is within latData[i] +/- distanceCheck) && (position.longitude is within longData[i] +/- distanceCheck))
 //add debug for closestTree before for loop
 for (let i = 0; i < 12; i++) {
+  print ("i:  "+i);
   if ((position.latitude > latData[i] - distanceCheck)&&(position.latitude < latData[i] + distanceCheck)&&(position.longitude > longData[i] - distanceCheck)&&(position.longitude < longData[i] + distanceCheck)){
     //checking if closeness to this tree is closer than any other tree in array
     if (((abs(latData[i]-position.latitude))+(abs(latData[i]-position.latitude)))/2 < treeDistance){
