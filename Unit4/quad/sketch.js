@@ -86,5 +86,3 @@ for (let i = 0; i < 11; i++) {
 //   text("you have moved " + distance, 10, 190);
 // fill('red') ;
 //   text("remember to take a screenshot before you take a picture of your surroundings!", 10, 260, 400);
-
-}
