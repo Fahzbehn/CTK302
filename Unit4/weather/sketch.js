@@ -23,7 +23,7 @@ function setup() {
     "https://api.openweathermap.org/data/2.5/weather?q=Normal,IL,US&units=imperial&";
   var myCityStringTwo =
       "https://api.openweathermap.org/data/2.5/weather?q=Miami,FL,US&units=imperial&";
-  var myCityStringTwo =
+  var myCityStringThree =
         "https://api.openweathermap.org/data/2.5/weather?q=Tokyo,Japan&units=imperial&";
 
   //You can also use "zipcode" - var myIDString = 'https://api.openweathermap.org/data/2.5/weather?zip=61820,us&units=imperial&';
